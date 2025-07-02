@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply</title>
+</head>
+<body>
+    <h1>Apply for this position</h1>
+    <a href="{{url_for('index')}}">Back to Home</a>
+    <h2>Data Analyst</h2>
+    <p>Phnom Penh, Cambodia</p>
+
+    <h3>Responesibilities</h3>
+    <ul>
+        <li>Collect, process, and perform detailed analysis of data</li>
+        <li>Interpret the results of data analysis</li>
+        <li>Prepare reports and present findings to management</li>
+    </ul>
+
+    <h3>Requirements</h3>
+    <ul>
+        <li>Bachelor's degree in Computer Science, Statistics, Mathematics, or a related field</li>
+        <li>Proven experience in data analysis</li>
+        <li>Strong analytical and problem-solving skills</li>
+    </ul>
+
+    <h3>Salary</h3>
+    <p>$50,000 - $70,000</p>
+
+    <h3>Application Form</h3>
+    <form action="{{url_for('submit')}}" method="post" enctype= "multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+        <label for="resume">Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required><br><br>    
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">    
+    </form>
+</body>
+</html>

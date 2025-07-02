@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submission Successful</title>
+    <script>
+            // Redirect after 10 seconds
+            setTimeout(function() {
+                window.location.href = "{{ url_for('index') }}";
+            }, 10000); // 10000ms = 10 seconds
+        };
+    </script>
+</head>
+<body>
+    <h2>Thank you! Your application was submitted.</h2>
+    <p>You will be redirected shortly...</p>
+</body>
+</html>
