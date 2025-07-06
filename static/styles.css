@@ -21,6 +21,19 @@ body {
     font-family: Roboto, sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: rgb(255, 100, 100);
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1.5px solid rgb(255, 100, 100);
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    opacity: 0.8;
+    margin-left: 1.5rem;
+}
+
+
 /* Header */
 .container {
     text-align: center;
@@ -114,7 +127,7 @@ body {
     font-size: var(--fontSizeP);
     font-weight: normal;
     margin-bottom: 1rem;
-    text-align: justify;
+    text-align: left;
     opacity: 0.8;
     text-indent: var(--textIndentP);
     line-height: var(--lineHeightP);
@@ -136,3 +149,133 @@ body {
     transition: 0.5s ease-in-out;
 }
 
+
+/* Apply  */
+.header-container{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /* font-size: var(--fontSizeH1); */
+    font-size: min(5rem, 5vw);
+    font-weight: bold;
+    color: var(--fontColorH);
+}
+
+.position-apply{
+    padding: var(--paddingContainer);
+    width: 100%;
+    height: auto;
+    padding-bottom: 0;
+}
+
+.position-apply h2{
+    font-size: var(--fontSizeH2);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    color: var(--fontColorH);
+}
+
+.postion-apply p{
+    font-size: var(--fontSizeP);
+    font-weight: normal;
+    text-align: left;
+    opacity: 0.8;
+}
+
+.position-apply h3{
+    font-size: var(--fontSizeH3);
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+    text-align: left;
+    color: var(--fontColorH);
+}
+
+.position-apply ul{
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.position-apply ul li{
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: left;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.position-apply ul li::before{
+    content: "•";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.apply-form{
+    padding: var(--paddingContainer);
+    width: 100%;
+    height: auto;
+    padding-bottom: 0;
+}
+
+.apply-form h3{
+    font-size: var(--fontSizeH3);
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+    text-align: left;
+    color: var(--fontColorH);
+}
+
+.apply-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+.apply-form form label{
+    font-size: var(--fontSizeP);
+    font-weight: normal;
+    text-align: left;
+    opacity: 0.8;
+}
+.apply-form form input{
+    font-size: 1rem ;
+    font-weight: normal;
+    text-align: left;
+    opacity: 0.8;
+    padding: 0.5rem;
+    border: 1px solid rgb(255, 100, 100);
+    border-radius: 0.5rem;
+    outline: none;
+    width: 70%;
+}
+
+.btn {
+    display: flex;
+    width: 50%;
+}
+
+.btn input{
+    width: 50%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    padding-left: 6rem;
+    border: 1.5px solid rgb(255, 100, 100);
+    border-radius: 0.7rem;
+    opacity: 0.8;
+    font-size: var(--fontSizeA);
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.btn input:hover{
+    opacity: 0.5;
+    transition: 0.5s ease-in-out;
+}

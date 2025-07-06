@@ -24,46 +24,18 @@
     <div class="position">
         <h2>Job Positions</h2>
         <ul>
+            {% for data in data %}
             <li>
                 <div class="position-container">
                     <div class="position-detail">
-                        <h3>Software Engineer</h3>
-                        <p>We are looking for a software engineer to join our team. You will be responsible for designing, coding, testing, and maintaining software applications.</p>
+                        <h3>{{data.job_title}}</h3>
+                        <p>{{data.job_description}}</p>
                     </div>
-                    <a href="{{url_for('apply')}}">Apply Now</a>
+                    <a href="{{url_for('apply', job_id=data.id)}}">Apply Now</a>
                 </div>
                 <hr>
             </li>
-            <li>
-                <div class="position-container">
-                    <div class="position-detail">
-                        <h3>Data Scientist</h3>
-                        <p>We are looking for a data scientist to join our team. You will be responsible for collecting, cleaning, and analyzing data to help our company make data-driven decisions.</p>
-                    </div>
-                    <a href="{{url_for('apply')}}">Apply Now</a>
-                </div>
-                <hr>
-            </li>
-            <li>
-                <div class="position-container">
-                    <div class="position-detail">
-                        <h3>UX Designer</h3>
-                        <p>We are looking for a UX designer to join our team. You will be responsible for designing user interfaces and experiences that are intuitive, easy to use, and visually appealing.</p>
-                    </div>
-                    <a href="{{url_for('apply')}}">Apply Now</a>
-                </div>
-                <hr>
-            </li>
-            <li>
-                <div class="position-container">
-                    <div class="position-detail">
-                        <h3>Product Manager</h3>
-                        <p>We are looking for a product manager to join our team. You will be responsible for defining the product vision, roadmap, and strategy, and working with cross-functional teams to launch new products.</p>
-                    </div>
-                    <a href="{{url_for('apply')}}">Apply Now</a>
-                </div>
-                <hr>
-            </li>
+            {% endfor %}
         </ul>
     </div>
     

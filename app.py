@@ -1,16 +1,19 @@
 from flask import Flask , render_template, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 import os
+from data.job import datas
 
 app = Flask(__name__)
 @app.route('/')
 def index():
-  return render_template('index.html')
+  return render_template('index.html', data = datas)
 
-
-@app.route('/apply')
-def apply():
-  return render_template('apply.html')
+@app.route('/apply/<int:job_id>')
+def apply(job_id):
+  job = next((item for item in datas if item["id"] == job_id), None)
+  if job is None:
+      abort(404)
+  return render_template('apply.html', data = job)
 
 
 # Upload configuration
